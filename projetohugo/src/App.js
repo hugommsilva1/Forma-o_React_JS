@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Formação : Feedback app
+          Formação : Lista de Compras
         </a>
       </header>
     </div>
