@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Media from "./componentes/Media";
 import Comentario from "./componentes/Comentario";
+import LoginPage from "./componentes/login-page.js";
 
 
 function App() {
@@ -68,6 +69,10 @@ function App() {
           <li key={comentario.id}>{comentario.texto}</li>
         ))}
       </ul> */}
+
+      <LoginPage />
+
+
     </>
   );
 }
