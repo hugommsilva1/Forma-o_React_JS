@@ -1,11 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React, { useState } from "react";
 import Media from "./componentes/Media";
 import Comentario from "./componentes/Comentario";
-import LoginPage from "./componentes/login-page.js";
+import { Login } from "./componentes/login";
+import { Register } from "./componentes/register";
+
 
 
 function App() {
+  const [currentForm, setCurrentForm] = useState('login');
+
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
+  
+  /*
   const title = "Blog";
   let nrPosts = 100;
   let nrTotal = 25;
@@ -25,6 +35,9 @@ function App() {
 
   const show = false;
 
+
+  */
+
   // ciclo If- Else
   // if(corDoPorto == azul){
   //   "futuro campeão"
@@ -34,7 +47,7 @@ function App() {
   // ciclo If- Else
   // corDoPorto == azul ? "futuro campeão" : "não há liga";
 
-  return (
+  /*return (
     <>
       <h1 className="meuEstilo"> {title} </h1>
       <p> Posts </p>
@@ -68,9 +81,21 @@ function App() {
         {comentarios2.map((comentario) => (
           <li key={comentario.id}>{comentario.texto}</li>
         ))}
-      </ul> */}
+      </ul> } */
+      
+  return (
+      <>
+      <div className="App">
+        {
+          currentForm === "login" ? <Login onFormSwitch = {toggleForm}/> : <Register onFormSwitch = {toggleForm}/>
+        }
+      </div>
 
-      <LoginPage />
+      
+
+      
+
+      
 
 
     </>
