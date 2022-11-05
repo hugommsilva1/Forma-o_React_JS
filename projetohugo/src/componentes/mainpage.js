@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Comentario() {
+function MainPage() {
 
     const comentarios2 = [
         { id: 1, texto: "Comentario um" },

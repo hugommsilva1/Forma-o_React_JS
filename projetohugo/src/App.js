@@ -5,6 +5,8 @@ import Media from "./componentes/Media";
 import Comentario from "./componentes/Comentario";
 import { Login } from "./componentes/login";
 import { Register } from "./componentes/register";
+import { MainPage } from "./componentes/mainpage.js";
+
 
 
 
@@ -88,12 +90,10 @@ function App() {
       <div className="App">
         {
           currentForm === "login" ? <Login onFormSwitch = {toggleForm}/> : <Register onFormSwitch = {toggleForm}/>
+
         }
       </div>
-
-      
-
-      
+  
 
       
 

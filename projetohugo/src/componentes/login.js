@@ -3,30 +3,44 @@ import React, { useState } from "react";
 export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    let emojiLogin = "🔒";
+    let isSuccessful = false;
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
-    }
 
-    let isSuccessful = false;
-
-  
-    document.getElementById("loginbutton").onclick = function(){
         if (email === "admin@admin.com" & pass === "pass") {
             isSuccessful = true;
+            emojiLogin = "🔓";
             alert("Login Successfull")
         } else {
             isSuccessful = false;
+            emojiLogin = "🔒";
             alert("Login Failed")
         }
     }
 
 
+    const Login = () => {
+        if (email === "admin@admin.com" & pass === "pass") {
+            isSuccessful = true;
+            emojiLogin = "🔓";
+            alert("Login Successfull")
+        } else {
+            isSuccessful = false;
+            emojiLogin = "🔒";
+            alert("Login Failed")
+        }
+    }
+
+
+ 
+
     return (
         <div className="auth-form-container">
             <h1>Shopping List 🛒</h1>
-            <p className= "emoji">🔒</p>
+            <p id= "emojiloginid" className= "emoji">{emojiLogin}</p>
             <h2>Login</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
