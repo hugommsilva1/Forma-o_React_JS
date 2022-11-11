@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -13,13 +14,14 @@ export const Login = (props) => {
         if (email === "admin@admin.com" & pass === "pass") {
             isSuccessful = true;
             emojiLogin = "🔓";
-            alert("Login Successfull")
+            alert("Login Successfull " + isSuccessful)
         } else {
             isSuccessful = false;
             emojiLogin = "🔒";
-            alert("Login Failed")
+            alert("Login Failed " + isSuccessful)
         }
     }
+
 
 
     const Login = () => {
@@ -53,3 +55,4 @@ export const Login = (props) => {
         </div>
     )
 }
+export var isSuccessful;

@@ -3,12 +3,15 @@ import "./App.css";
 import React, { useState } from "react";
 import Media from "./componentes/Media";
 import Comentario from "./componentes/Comentario";
-import { Login } from "./componentes/login";
+import { isSuccessful, Login } from "./componentes/login";
 import { Register } from "./componentes/register";
-import { MainPage } from "./componentes/mainpage.js";
+import Home from "./pages/Home";
 
 
 
+/*function App() {
+  return <Home />;
+} */
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -16,7 +19,10 @@ function App() {
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   }
-  
+
+
+
+
   /*
   const title = "Blog";
   let nrPosts = 100;
@@ -84,13 +90,24 @@ function App() {
           <li key={comentario.id}>{comentario.texto}</li>
         ))}
       </ul> } */
+
+
+
+
+
       
   return (
       <>
       <div className="App">
         {
-          currentForm === "login" ? <Login onFormSwitch = {toggleForm}/> : <Register onFormSwitch = {toggleForm}/>
-
+          currentForm === "login" ? <Login onFormSwitch = {toggleForm} /> : <Register onFormSwitch = {toggleForm}/>
+          
+        }
+      </div>
+      <div className="Home">
+        {
+          isSuccessful = true ? <Home/> : <Login/>
+          
         }
       </div>
   
