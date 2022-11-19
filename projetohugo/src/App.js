@@ -8,11 +8,6 @@ import { Register } from "./componentes/register";
 import Home from "./pages/Home";
 
 
-
-/*function App() {
-  return <Home />;
-} */
-
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
 
@@ -20,7 +15,7 @@ function App() {
     setCurrentForm(formName);
   }
 
-
+let isSuccessful = false;
 
 
   /*
@@ -104,12 +99,13 @@ function App() {
           
         }
       </div>
-      <div className="Home">
+      
+      {/* <div className="Home">
         {
           isSuccessful = true ? <Home/> : <Login/>
           
         }
-      </div>
+      </div> */}
   
 
       
